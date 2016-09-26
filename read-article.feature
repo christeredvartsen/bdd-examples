@@ -20,3 +20,7 @@ Feature: Read article on vg.no
     Scenario: Fetch an article that does not exist
         When I request vg.no/a/123
         Then I should get a response with status code 404
+
+    Scenario: Fetch an article that does not exist (when it does, this is to have a failure)
+        When I request vg.no/a/196000
+        Then I should get a response with status code 404
