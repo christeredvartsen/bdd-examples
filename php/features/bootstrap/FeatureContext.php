@@ -49,7 +49,7 @@ class FeatureContext implements Context {
      * @Then the article title is :title
      */
     public function thenTheTitleIs($title) {
-        if (!$this->currentArticle || $this->currentArticle['title'] !== $title) {
+        if ($this->currentArticle['title'] !== $title) {
             throw new Exception(sprintf(
                 'Incorrect title, expected %s, got %s',
                 $title,
