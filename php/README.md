@@ -2,5 +2,5 @@
 
 Clone, then run:
 
-    composer install
+    php composer.phar install
     ./vendor/bin/behat
